@@ -1,11 +1,13 @@
 <div class="sharing">
-  {% if site.twitter_tweet_button %}
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
-  {% endif %}
-  {% if site.google_plus_one %}
-  <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
-  {% endif %}
-  {% if site.facebook_like %}
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  {% endif %}
+    <!-- Twitter -->
+    <a href="//twitter.com/intent/tweet?original_referer={{ site.url }}{{ page.url }}&text={{page.title}}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_user }}" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+    <!-- Facebook -->
+    <a href="//www.facebook.com/sharer/sharer.php?u= {{ site.url }}{{ page.url }}" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+    <!-- Google+ -->
+    <a href="//plus.google.com/share?url= {{ site.url }} {{ page.url }}" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="fa fa-google-plus"></i> Google+</a>
+    <!-- StumbleUpon -->
+    <a href="//www.quora.com/submit?url= {{ site.url }} {{ page.url }}" title="Share on Quora" target="_blank" data-placement="top" class="btn btn-stumbleupon"><i class="fa fa-stumbleupon"></i> Quora</a>
+    <!-- LinkedIn -->
+    <a href="//www.linkedin.com/shareArticle?mini=true&url={{ site.url }} {{ page.url }}&title={{ page.title }}&summary=" title="Share on LinkedIn" target="_blank" class="btn btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
 </div>
+

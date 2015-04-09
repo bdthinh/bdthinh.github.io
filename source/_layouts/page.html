@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="row">
-  <div class="page-content {% unless page.sidebar == false or site.page_asides == empty and site.default_asides == empty %}col-md-9{% else %}col-md-12{% endunless %}">
+  <div class="page-content {% unless page.sidebar == false or site.page_asides == empty and site.default_asides == empty %}col-md-7{% else %}col-md-12{% endunless %}">
     <article role="article">
       {% unless page.no_header %}
         <header class="page-header">
@@ -29,6 +29,7 @@ layout: default
         <footer>
           {% if page.date or page.author %}<p class="meta text-muted">
             {% if page.author %}{% include post/author.html %}{% endif %}
+            <span style="display: inline-block; width: 50px;"> </span>
             {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
             {% if page.categories %}{% include post/categories.html %}{% endif %}
           </p>{% endif %}
@@ -47,7 +48,7 @@ layout: default
   </div>
 
   {% unless page.sidebar == false or site.page_asides == empty and site.default_asides == empty %}
-    <aside class="sidebar col-md-3">
+    <aside class="sidebar col-md-5">
       {% if site.page_asides.size %}
         {% include_array page_asides %}
       {% else %}
