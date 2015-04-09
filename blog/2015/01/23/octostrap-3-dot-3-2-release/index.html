@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Octostrap 3.3.2 Release - NLP Journey</title>
+  <meta name="author" content="Thinh D. Bui">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bdthinh.github.io/blog/2015/01/23/octostrap-3-dot-3-2-release/">
+  <link href="/favicon.png" type="image/png" rel="icon">
+  <link href="" rel="alternate" title="NLP Journey" type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://bdthinh.github.io/blog/2015/01/23/octostrap-3-dot-3-2-release/">
+  <meta property="og:title" content="Octostrap 3.3.2 Release - NLP Journey">
+  
+
+  <script src="/javascripts/libs/jquery/jquery-2.1.3.min.js"></script>
+
+<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  
+<script id="search-results-template" type="text/x-handlebars-template">
+  {{#entries}}
+    <article>
+      <h3>
+         <small><time datetime="{{date}}" pubdate>{{date}}</time></small>
+         <a href="{{url}}">{{title}}</a>
+         <p>{{ tags }} | <a href="/categories/{{category }}">{{category}}</a></p>
+      </h3>
+    </article>
+  {{/entries}}
+</script>
+
+
+  
+
+  <!-- <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="/assets/app-fef8dbc2d57c16768fd1f9397a507ff4.css">
+  <script src="/assets/app-73a02ab9f137226514e51bd92822b8eb.js"></script>
+  
+
+</head>
+
+  <body   >
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" title="toggle navbar" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">NLP Journey</a>
+        </div>        
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a rel="index" href="/">Main</a>
+                </li>
+                <li >
+                    <a href="/blog/archives">Activities</a>
+                </li>
+
+                <li >
+                    <a href="/blog/papers">Papers</a>
+                </li>
+
+                <li >
+                    <a href="/blog/about">About</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+                
+                    <form class="search navbar-form navbar-right" action="/blog/search" method="GET">
+  <input type="hidden" name="sitesearch" role="search">
+  <div class="form-group">
+      <input class="form-control" type="text" name="q" placeholder="Search">
+  </div>
+</form>    
+                 
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+      </header>
+      <div id="main" role="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-9" itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="NLP Journey" />
+    <meta itemprop="description" content="I'm a researcher being addicted to Natural language processing |, currently working as a research assistant and ROR developer." />
+    <meta itemprop="url" content="http://bdthinh.github.io" />
+    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-01-23T16:49:08+07:00"  data-updated="true" itemprop="datePublished dateCreated">Fri 23 Jan 2015,  4:49 PM</time>
+        
+           | <a href="#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://bdthinh.github.io">Comments</a>
+        
+      </p>
+    
+    
+    <h1 class="entry-title" itemprop="name headline">
+        Octostrap 3.3.2 Release
+        
+    </h1>
+    
+  </header>
+
+
+<div class="entry-content clearfix" itemprop="articleBody description"><p>Trying to keep up to date with
+<a href="http://blog.getbootstrap.com/2015/01/19/bootstrap-3-3-2-released/">Twitter Bootstrap</a>,
+<a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.2">here is a release for the 3.3.2 version</a>.
+As usual a lot of good stuff happened, here is a quick summary.</p>
+
+<h1>The &ldquo;ordinal&rdquo; issue</h1>
+
+<p><strong>Octostrap3</strong> is just an Octopress theme. Sadly, Octopress does not let the
+theme handle all the HTML generation and rendering (that&rsquo;s why we have to
+<a href="/setup/octopatch">patch Octopress</a> for some features). The
+latest issue is the date formating, which has already been discussed at length
+<a href="https://github.com/kAworu/octostrap3/commit/a719bb0bef43a212efd09c74ce07e4e35153635f">here</a>
+and
+<a href="https://github.com/kAworu/octostrap3/issues/41">here</a>.</p>
+
+<p>Long story short you only need to fix the <strong>date_format</strong> configuration (in
+your <em>_config.yml</em> file) to something that
+<a href="http://www.ruby-doc.org/core-2.2.0/Time.html#method-i-strftime">strftime()</a>
+can handle. For example, this blog use <code>%a %e %b %Y, %l:%M %p</code>.</p>
+
+<h1>Open Graph Protocol</h1>
+
+<p>Thanks to <a href="https://github.com/paskal">Dmitry Verkhoturov</a>, <strong>Octostrap3</strong> now
+support <a href="http://opengraphprotocol.org/">the Open Graph Protocol</a>. This allow a
+better integration with Facebook and some others social medias (using the
+Open Graph tags). See the
+<a href="https://github.com/kAworu/octostrap3/commit/f8ab42916cbb26e59ccc3f1ba1afd415a58e01f2">commit&rsquo;s comment</a>
+to fully take advantage of it.</p>
+
+<h1>a10y</h1>
+
+<p><strong>Octostrap3</strong> is in the process of improving Accessibility. Various small
+changes have been already made and it is still in progress. You can check and
+contribute to improve a10y by following / commenting on
+<a href="https://github.com/kAworu/octostrap3/issues/38">this issue</a>, we&rsquo;d love to hear
+about you !</p>
+
+<h1>Fixes</h1>
+
+<p>As usual, various bug fixes and small improvements here and there :)</p>
+
+<p>Enjoy !</p>
+</div>
+
+
+      <footer>
+        <p class="meta text-muted">
+          
+  
+
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Thinh D. Bui</span></span>
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-01-23T16:49:08+07:00"  data-updated="true" itemprop="datePublished dateCreated">Fri 23 Jan 2015,  4:49 PM</time>
+          
+
+
+        </p>
+        
+          <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bdthinh.github.io/blog/2015/01/23/octostrap-3-dot-3-2-release/" data-via="jinsherlock" data-counturl="http://bdthinh.github.io/blog/2015/01/23/octostrap-3-dot-3-2-release/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+        
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/blog/2014/07/23/octostrap-3-dot-2-0-release/" title="Previous Post: Octostrap 3.2.0 release">&laquo; Octostrap 3.2.0 release</a></li>
+            
+            
+          </ul>
+        
+      </footer>
+    </article>
+    
+      <section>
+        <h2>Comments</h2>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
+    
+  </div>
+
+  
+  <aside class="sidebar col-md-3">
+    
+      <section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  
+  <div id="recent_posts" class="list-group">
+    
+    <a class="list-group-item active" href="/blog/2015/01/23/octostrap-3-dot-3-2-release/">Octostrap 3.3.2 Release</a>
+    
+    <a class="list-group-item " href="/blog/2014/07/23/octostrap-3-dot-2-0-release/">Octostrap 3.2.0 Release</a>
+    
+    <a class="list-group-item " href="/blog/2014/02/03/octostrap-3-dot-1-is-out/">Octostrap 3.1 Is Out</a>
+    
+    <a class="list-group-item " href="/blog/2013/11/23/github-page/">GitHub Page</a>
+    
+  </div>
+</section>
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Categories</h3>
+  </div>
+  <div class="list-group">
+    
+    
+    <a class="list-group-item " href="/blog/categories/octopress/index.html">
+        <span class="badge">4</span>
+        octopress
+      </a>
+    
+    
+    <a class="list-group-item " href="/blog/categories/github/index.html">
+        <span class="badge">1</span>
+        github
+      </a>
+    
+  </div>
+</section>
+
+    
+  </aside>
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo"><div class="container">
+    <p class="text-muted credits">
+  Copyright &copy; 2015 - Thinh D. Bui<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+      <!-- <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>. -->
+  </small>
+</p>
+
+</div>
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'bdthinhgithubio';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://bdthinh.github.io/blog/2015/01/23/octostrap-3-dot-3-2-release/';
+        var disqus_url = 'http://bdthinh.github.io/blog/2015/01/23/octostrap-3-dot-3-2-release/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr.js"></script>
+
+  </body>
+</html>

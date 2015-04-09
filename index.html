@@ -1,1 +1,721 @@
-My Octopress Page is coming soon &hellip;
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NLP Journey</title>
+  <meta name="author" content="Thinh D. Bui">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bdthinh.github.io/">
+  <link href="/favicon.png" type="image/png" rel="icon">
+  <link href="" rel="alternate" title="NLP Journey" type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://bdthinh.github.io/">
+  <meta property="og:title" content="NLP Journey">
+  <meta property="og:description" content="I'm a researcher being addicted to Natural language processing |, currently working as a research assistant and ROR developer.">
+
+  <script src="/javascripts/libs/jquery/jquery-2.1.3.min.js"></script>
+
+<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  
+<script id="search-results-template" type="text/x-handlebars-template">
+  {{#entries}}
+    <article>
+      <h3>
+         <small><time datetime="{{date}}" pubdate>{{date}}</time></small>
+         <a href="{{url}}">{{title}}</a>
+         <p>{{ tags }} | <a href="/categories/{{category }}">{{category}}</a></p>
+      </h3>
+    </article>
+  {{/entries}}
+</script>
+
+
+  
+
+  <!-- <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="/assets/app-fef8dbc2d57c16768fd1f9397a507ff4.css">
+  <script src="/assets/app-73a02ab9f137226514e51bd92822b8eb.js"></script>
+  
+
+</head>
+
+  <body   >
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" title="toggle navbar" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">NLP Journey</a>
+        </div>        
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a rel="index" href="/">Main</a>
+                </li>
+                <li >
+                    <a href="/blog/archives">Activities</a>
+                </li>
+
+                <li >
+                    <a href="/blog/papers">Papers</a>
+                </li>
+
+                <li >
+                    <a href="/blog/about">About</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+                
+                    <form class="search navbar-form navbar-right" action="/blog/search" method="GET">
+  <input type="hidden" name="sitesearch" role="search">
+  <div class="form-group">
+      <input class="form-control" type="text" name="q" placeholder="Search">
+  </div>
+</form>    
+                 
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+      </header>
+      <div id="main" role="main" class="container">
+        <div id="content">
+          <div class="row">
+
+  <div class="page-content col-md-9">
+    <div class="blog-index" itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="NLP Journey" />
+    <meta itemprop="description" content="I'm a researcher being addicted to Natural language processing |, currently working as a research assistant and ROR developer." />
+    <meta itemprop="url" content="http://bdthinh.github.io" />
+      
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-01-23T16:49:08+07:00"  data-updated="true" itemprop="datePublished dateCreated">Fri 23 Jan 2015,  4:49 PM</time>
+        
+           | <a href="/blog/2015/01/23/octostrap-3-dot-3-2-release/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://bdthinh.github.io/blog/2015/01/23/octostrap-3-dot-3-2-release/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2015/01/23/octostrap-3-dot-3-2-release/" itemprop="url">Octostrap 3.3.2 Release</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>Trying to keep up to date with
+<a href="http://blog.getbootstrap.com/2015/01/19/bootstrap-3-3-2-released/">Twitter Bootstrap</a>,
+<a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.2">here is a release for the 3.3.2 version</a>.
+As usual a lot of good stuff happened, here is a quick summary.</p>
+
+<h1>The &ldquo;ordinal&rdquo; issue</h1>
+
+<p><strong>Octostrap3</strong> is just an Octopress theme. Sadly, Octopress does not let the
+theme handle all the HTML generation and rendering (that&rsquo;s why we have to
+<a href="/setup/octopatch">patch Octopress</a> for some features). The
+latest issue is the date formating, which has already been discussed at length
+<a href="https://github.com/kAworu/octostrap3/commit/a719bb0bef43a212efd09c74ce07e4e35153635f">here</a>
+and
+<a href="https://github.com/kAworu/octostrap3/issues/41">here</a>.</p>
+
+<p>Long story short you only need to fix the <strong>date_format</strong> configuration (in
+your <em>_config.yml</em> file) to something that
+<a href="http://www.ruby-doc.org/core-2.2.0/Time.html#method-i-strftime">strftime()</a>
+can handle. For example, this blog use <code>%a %e %b %Y, %l:%M %p</code>.</p>
+
+<h1>Open Graph Protocol</h1>
+
+<p>Thanks to <a href="https://github.com/paskal">Dmitry Verkhoturov</a>, <strong>Octostrap3</strong> now
+support <a href="http://opengraphprotocol.org/">the Open Graph Protocol</a>. This allow a
+better integration with Facebook and some others social medias (using the
+Open Graph tags). See the
+<a href="https://github.com/kAworu/octostrap3/commit/f8ab42916cbb26e59ccc3f1ba1afd415a58e01f2">commit&rsquo;s comment</a>
+to fully take advantage of it.</p>
+
+<h1>a10y</h1>
+
+<p><strong>Octostrap3</strong> is in the process of improving Accessibility. Various small
+changes have been already made and it is still in progress. You can check and
+contribute to improve a10y by following / commenting on
+<a href="https://github.com/kAworu/octostrap3/issues/38">this issue</a>, we&rsquo;d love to hear
+about you !</p>
+
+<h1>Fixes</h1>
+
+<p>As usual, various bug fixes and small improvements here and there :)</p>
+
+<p>Enjoy !</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-07-23T19:51:10+07:00"  data-updated="true" itemprop="datePublished dateCreated">Wed 23 Jul 2014,  7:51 PM</time>
+        
+           | <a href="/blog/2014/07/23/octostrap-3-dot-2-0-release/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://bdthinh.github.io/blog/2014/07/23/octostrap-3-dot-2-0-release/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2014/07/23/octostrap-3-dot-2-0-release/" itemprop="url">Octostrap 3.2.0 Release</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>As usual, <a href="http://blog.getbootstrap.com/2014/06/26/bootstrap-3-2-0-released/">new Twitter Bootstrap</a> release means new <strong>Octostrap3</strong>
+release. This time <strong>Octostrap3</strong> also bring some new stuff in, thanks to
+various contributors.</p>
+
+<h1>CDN friendly</h1>
+
+<p>Those who prefer to use a CDN instead of hosting assets like Twitter Bootstrap
+and jQuery should be able to do so only by modifying &ldquo;custom&rdquo; files in the
+theme. CSS are loaded from <code>source/_includes/custom/head.html</code> while Javascript
+are loaded from <code>source/_includes/custom/after_footer.html</code> (with the notable
+exception of jQuery which is in <code>source/_includes/custom/head.html</code>).</p>
+
+<h1>Line numbers in gist and code blocks</h1>
+
+<p>Before 3.2.0, <strong>Octostrap3</strong> was hidding line numbers because <a href="https://github.com/imathis/octopress/pull/1485">Octopress does
+not support the documented lineos option</a>. <a href="https://github.com/kAworu/octostrap3/issues/25">As
+correctly pointed out</a> by <strong>shidarin</strong> <q>Octopress is blogging
+for hackers</q> so displaying line numbers should be the default. If you don&rsquo;t
+want the line numbers you&rsquo;ll find in <code>sass/custom/_syntax.scss</code> how to hide
+them.</p>
+
+<h1>Structured metadata</h1>
+
+<p>Thanks to <a href="https://github.com/paskal">Dmitry Verkhoturov</a> Octostrap has now
+<a href="http://schema.org/">schema.org</a> semantic markup for Blog and Blog Posting. If
+you want to improve it for your static pages you would have to do it yourself
+though, since the types you might use really depends on the content of your
+site.</p>
+
+<p>That&rsquo;s it for today, enjoy !</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-02-03T22:47:32+07:00"  data-updated="true" itemprop="datePublished dateCreated">Mon  3 Feb 2014, 10:47 PM</time>
+        
+           | <a href="/blog/2014/02/03/octostrap-3-dot-1-is-out/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://bdthinh.github.io/blog/2014/02/03/octostrap-3-dot-1-is-out/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2014/02/03/octostrap-3-dot-1-is-out/" itemprop="url">Octostrap 3.1 Is Out</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p><strong>Twitter Bootstrap 3.1</strong> has been released just a few days ago. This new
+version brings improvements in every areas from documentation and examples to
+build process and <a href="http://sass-lang.com/">SASS</a> support. It&rsquo;s also the first release under the MIT
+License which will allow GPL&#8217;ed projects (like <a href="https://drupal.org/">Drupal</a>) to include
+Bootstrap. As always the release is welcomed by an awesome video, so you better
+<a href="http://blog.getbootstrap.com/2014/01/30/bootstrap-3-1-0-released/">check it out</a>.</p>
+
+<p>To celebrate this release, <strong>Octostrap3</strong> has been updated. It include now
+Bootstrap 3.1, the patches provided in the setup have been updated for the
+latest <strong>Octopress</strong> version and gist integration has been improved. Here is a
+preview of what gist should look like now:</p>
+
+<div><script src='https://gist.github.com/8471788.js'></script>
+<noscript><pre><code>From 59318158e58c0414ead9238126d2a7743a67e29e Mon Sep 17 00:00:00 2001
+From: Alexandre Perrin &lt;alex@kaworu.ch&gt;
+Date: Fri, 17 Jan 2014 12:06:41 +0100
+Subject: [PATCH] make_inet_socket(): Use SO_NOSIGPIPE when creating a client
+ socket.
+
+  We have to check for error when sending anyway, so we&#39;ll check for
+  EPIPE.
+
+  Before this patch `rspamc stat` fail when it cannot connect to the
+  controller: it dies to SIGPIPE because the socket is fcntl O_NONBLOCK
+  and we ignore when connect(2) says EINPROGRESS.
+---
+ src/util.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/util.c b/src/util.c
+index 4a88bb1..8f5fdc1 100644
+--- a/src/util.c
++++ b/src/util.c
+@@ -124,6 +124,8 @@ make_inet_socket (gint type, struct addrinfo *addr, gboolean is_server, gboolean
+            r = bind (fd, cur-&gt;ai_addr, cur-&gt;ai_addrlen);
+        }
+        else {
++           /* we will check for EPIPE when sending data */
++           setsockopt (fd, SOL_SOCKET, SO_NOSIGPIPE, (const void *)&amp;on, sizeof (gint));
+            r = connect (fd, cur-&gt;ai_addr, cur-&gt;ai_addrlen);
+        }
+ 
+-- 
+1.8.5.2
+
+</code></pre></noscript></div>
+
+
+
+
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch)</h3> <a href='/downloads/code/0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='diff'><span class='line'>From 59318158e58c0414ead9238126d2a7743a67e29e Mon Sep 17 00:00:00 2001
+</span><span class='line'>From: Alexandre Perrin &lt;alex@kaworu.ch&gt;
+</span><span class='line'>Date: Fri, 17 Jan 2014 12:06:41 +0100
+</span><span class='line'>Subject: [PATCH] make_inet_socket(): Use SO_NOSIGPIPE when creating a client
+</span><span class='line'> socket.
+</span><span class='line'>
+</span><span class='line'>  We have to check for error when sending anyway, so we&#39;ll check for
+</span><span class='line'>  EPIPE.
+</span><span class='line'>
+</span><span class='line'>  Before this patch `rspamc stat` fail when it cannot connect to the
+</span><span class='line'>  controller: it dies to SIGPIPE because the socket is fcntl O_NONBLOCK
+</span><span class='line'>  and we ignore when connect(2) says EINPROGRESS.
+</span><span class='line'><span class="gd">---</span>
+</span><span class='line'> src/util.c | 2 ++
+</span><span class='line'> 1 file changed, 2 insertions(+)
+</span><span class='line'>
+</span><span class='line'><span class="gh">diff --git a/src/util.c b/src/util.c</span>
+</span><span class='line'><span class="gh">index 4a88bb1..8f5fdc1 100644</span>
+</span><span class='line'><span class="gd">--- a/src/util.c</span>
+</span><span class='line'><span class="gi">+++ b/src/util.c</span>
+</span><span class='line'><span class="gu">@@ -124,6 +124,8 @@ make_inet_socket (gint type, struct addrinfo *addr, gboolean is_server, gboolean</span>
+</span><span class='line'>          r = bind (fd, cur-&gt;ai_addr, cur-&gt;ai_addrlen);
+</span><span class='line'>      }
+</span><span class='line'>      else {
+</span><span class='line'><span class="gi">+            /* we will check for EPIPE when sending data */</span>
+</span><span class='line'><span class="gi">+            setsockopt (fd, SOL_SOCKET, SO_NOSIGPIPE, (const void *)&amp;on, sizeof (gint));</span>
+</span><span class='line'>          r = connect (fd, cur-&gt;ai_addr, cur-&gt;ai_addrlen);
+</span><span class='line'>      }
+</span><span class='line'>
+</span><span class='line'><span class="gd">-- </span>
+</span><span class='line'>1.8.5.2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy !</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-23T14:39:00+07:00"  data-updated="true" itemprop="datePublished dateCreated">Sat 23 Nov 2013,  2:39 PM</time>
+        
+           | <a href="/blog/2013/11/23/github-page/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://bdthinh.github.io/blog/2013/11/23/github-page/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2013/11/23/github-page/" itemprop="url">GitHub Page</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p><img class="no-border pull-right" src="/images/GitHub-Mark.png" title="GitHub logo" ></p>
+
+<p>There is <a href="/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
+the GitHub sidebar, but with more extensive informations.</p>
+
+<p>It has been based on <a href="http://carlboettiger.info/software.html">this one</a> but modified in order to ouput bootstrap
+classes (and also use the GitHub account information from octopress config). As
+such, it can be used with any octopress/boostrap3 theme (and only a very few
+modifications are needed to &ldquo;untie&rdquo; it from octopress).</p>
+
+<p>If it suits you, the page&rsquo;s source (as all this blog&rsquo;s code) can be found
+<a href="https://github.com/kAworu/octostrap3/blob/gh-pages-src/source/github-page-example/index.html">here</a>. In addition to Bootstrap3 &amp; jQuery, you&rsquo;ll need <code>strftime.js</code>.</p>
+
+<p>Kudo to Jean Pierre for the idea :)</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-10-03T23:27:00+07:00"  data-updated="true" itemprop="datePublished dateCreated">Thu  3 Oct 2013, 11:27 PM</time>
+        
+           | <a href="/blog/2013/10/03/category-list-aside/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://bdthinh.github.io/blog/2013/10/03/category-list-aside/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2013/10/03/category-list-aside/" itemprop="url">Category List Aside</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>The code for the awesome category list you can see in the <code>aside</code>
+<a href="#" id="category-list-pointer">here</a>.</p>
+
+<script>
+jQuery(document).ready(function ($) {
+    $('#category-list-pointer').click(function (event) {
+        event.preventDefault(); // don't follow href
+        // XXX: ugly, should have an id.
+        var $target = $('h3.panel-title:contains(Categories)').closest('.panel');
+        $target.css({opacity: 0}).animate({opacity: 1}, 700);
+    });
+});
+</script>
+
+
+<p>It will:</p>
+
+<ul>
+<li>display <em>all</em> your categories with a post counter (using Bootstrap&rsquo;s <code>badge</code>
+class)</li>
+<li>highlight when you&rsquo;re on the matching category page</li>
+<li>be installed in 3 minutes !</li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a class="btn btn-default" href="/blog/2013/10/03/category-list-aside/">Read on &rarr;</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-10-02T23:43:00+07:00"  data-updated="true" itemprop="datePublished dateCreated">Wed  2 Oct 2013, 11:43 PM</time>
+        
+           | <a href="/blog/2013/10/02/selecting-the-navbar-menu/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://bdthinh.github.io/blog/2013/10/02/selecting-the-navbar-menu/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2013/10/02/selecting-the-navbar-menu/" itemprop="url">Selecting the Navbar Menu</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>Bootstrap <a href="http://getbootstrap.com/components/#navbar">navbar</a> can have an
+&ldquo;active&rdquo; element highlighted which ease navigation. In <strong>Octostrap3</strong> it is
+possible to control which menu is selected on each page or post.</p>
+
+</div>
+  
+  
+    <footer>
+      <a class="btn btn-default" href="/blog/2013/10/02/selecting-the-navbar-menu/">Read on &rarr;</a>
+    </footer>
+  
+
+
+        </article>
+      
+    </div>
+    <ul class="pager">
+      
+        <li class="previous"><a href="/blog/page/2">&larr;&nbsp;Older</a></li>
+      
+      <li><a href="/blog/archives">Blog Archives</a></li>
+      
+        <li class="next disabled"><a href="#">Newer&nbsp;&rarr;</a></li>
+      
+    </ul>
+  </div>
+      
+    <aside class="sidebar col-md-3">
+      
+        <section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  
+  <div id="recent_posts" class="list-group">
+    
+    <a class="list-group-item " href="/blog/2015/01/23/octostrap-3-dot-3-2-release/">Octostrap 3.3.2 Release</a>
+    
+    <a class="list-group-item " href="/blog/2014/07/23/octostrap-3-dot-2-0-release/">Octostrap 3.2.0 Release</a>
+    
+    <a class="list-group-item " href="/blog/2014/02/03/octostrap-3-dot-1-is-out/">Octostrap 3.1 Is Out</a>
+    
+    <a class="list-group-item " href="/blog/2013/11/23/github-page/">GitHub Page</a>
+    
+  </div>
+</section>
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Categories</h3>
+  </div>
+  <div class="list-group">
+    
+    
+    <a class="list-group-item " href="/blog/categories/octopress/index.html">
+        <span class="badge">4</span>
+        octopress
+      </a>
+    
+    
+    <a class="list-group-item " href="/blog/categories/github/index.html">
+        <span class="badge">1</span>
+        github
+      </a>
+    
+  </div>
+</section>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+      
+    </aside>
+    
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo"><div class="container">
+    <p class="text-muted credits">
+  Copyright &copy; 2015 - Thinh D. Bui<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+      <!-- <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>. -->
+  </small>
+</p>
+
+</div>
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'bdthinhgithubio';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr.js"></script>
+
+  </body>
+</html>
