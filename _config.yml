@@ -2,12 +2,13 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://kAworu.github.io/octostrap3
-title: Octostrap3 demo
-subtitle: Twitter Bootstrap theme for Octopress
-author: kAworu
-simple_search: https://www.google.com/search
-description: Simple demo blog for octostrap3
+url: http://bdthinh.github.io
+title: NLP Journey
+subtitle: Journey in understanding text
+author: Thinh D. Bui
+simple_search: #https://www.google.com/search
+lunr_search: true
+description: "I'm a researcher being addicted to Natural language processing |, currently working as a research assistant and ROR developer."
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -16,20 +17,20 @@ description: Simple demo blog for octostrap3
 date_format: "%a %e %b %Y, %l:%M %p"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /octostrap3/atom.xml
-subscribe_email:
+# subscribe_rss: /octostrap3/atom.xml
+# subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+# email:
 
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /octostrap3
+root: /
 permalink: /blog/:year/:month/:day/:title/
 source: source
-destination: public/octostrap3
+destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
@@ -50,19 +51,30 @@ excerpt_separator: "<!--more-->"
 titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
+default_header: [
+]
+
+default_footer: [
+]
+
+default_plugin: [
+]
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
 default_asides: [
     asides/recent_posts.html,
     custom/asides/category_list.html
 ]
-
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 blog_index_asides: [
-    custom/asides/what_is_octostrap3.html,
+    # custom/asides/what_is_octostrap3.html,
+    # custom/asides/who_am_i.html,
     asides/recent_posts.html,
     custom/asides/category_list.html,
-    asides/github.html
+    asides/github.html,
+    facebook_like.html,
+    asides/googleplus.html,
+    asides/pinboard.html
 ]
 # post_asides:
 # page_asides:
@@ -72,17 +84,18 @@ blog_index_asides: [
 # ----------------------- #
 
 # Github repositories
-github_user: kAworu
+github_user:
 github_repo_count: 4
-github_show_profile_link: true
+github_show_profile_link: false
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: jinsherlock
 twitter_tweet_button: true
+twitter_follow_button: true
 
 # Google +1
-google_plus_one: true
+google_plus_one: false
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -99,11 +112,33 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: octostrap3
+disqus_short_name: bdthinhgithubio
 disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
 
 # Facebook Like
+facebook_user: jin.sherlock.7
 facebook_like: true
+
+# Plugin: jekyll-assets
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - javascripts
+    - stylesheets
+    - assets/images
+    - assets/fancybox
+    - assets/bootstrap/dist/css
+    - assets/jwplayer
+    - assets/bootstrap/dist/js
+    - assets/bootstrap/dist/fonts
+    - vendors/bootstrap/stylesheets
+    - vendors/bootstrap/javascripts
+  compress:
+    js:   'yui'
+    css:  'yui'
+  cachebust: hard
+  gzip: [ text/css, application/javascript ]

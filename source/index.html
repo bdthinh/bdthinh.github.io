@@ -1,9 +1,11 @@
 ---
 layout: default
 navbar: Blog
+allow_ads: true
 ---
 
 <div class="row">
+
   <div class="page-content {% unless site.default_asides == empty and site.blog_index_asides == empty %}col-md-9{% else %}col-md-12{% endunless %}">
     <div class="blog-index" itemscope itemtype="http://schema.org/Blog">
     <meta itemprop="name" content="{{site.title}}" />
@@ -17,7 +19,6 @@ navbar: Blog
         </article>
       {% endfor %}
     </div>
-
     <ul class="pager">
       {% if paginator.next_page %}
         <li class="previous"><a href="{{paginator.next_page_path}}">&larr;&nbsp;Older</a></li>
@@ -32,8 +33,7 @@ navbar: Blog
       {% endif %}
     </ul>
   </div>
-
-  {% unless site.default_asides == empty and site.blog_index_asides == empty %}
+      {% unless site.default_asides == empty and site.blog_index_asides == empty %}
     <aside class="sidebar col-md-3">
       {% if site.blog_index_asides.size %}
         {% include_array blog_index_asides %}
@@ -41,5 +41,6 @@ navbar: Blog
         {% include_array default_asides %}
       {% endif %}
     </aside>
-  {% endunless %}
+    {% endunless %}
+
 </div>

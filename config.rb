@@ -4,16 +4,16 @@ require 'sass-globbing'
 project_type = :stand_alone
 
 # Publishing paths
-http_path = "/octostrap3/"
-http_images_path = "/octostrap3/images"
+http_path = "/"
+http_images_path = "/images"
 http_generated_images_path = "/images"
-http_fonts_path = "/octostrap3/fonts"
-css_dir = "public/octostrap3/stylesheets"
+http_fonts_path = "/fonts"
+css_dir = "public/stylesheets"
 
 # Local development paths
 sass_dir = "sass"
 images_dir = "source/images"
 fonts_dir = "source/fonts"
 
-line_comments = false
-output_style = :compressed
+line_comments = true
+output_style = :expanded

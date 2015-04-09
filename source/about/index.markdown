@@ -1,16 +1,15 @@
 ---
 layout: page
 navbar: About
-title: "About Octostrap3"
+title: "About NLP Journey"
 date: 2013-10-03 23:49
 comments: true
 sharing: true
 footer: true
 ---
 
-**Octostrap3** started because I really wanted to use Bootstrap while posting
-[on my blog](https://kaworu.ch) and all Octopress themes were based on
-Bootstrap 2.x.
+**NLP Journey** started because I really wanted to mark my knowledge while research
+[on my lab]() on Natural Language Processing focusing on Semantics Inference
 
 <h2>Code & Contributing</h2>
 

@@ -14,6 +14,11 @@ group :development do
   gem 'rubypants', '~> 0.2.0'
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
+  gem 'sprockets', '>= 2.2.1'
+  gem 'tilt', '1.4.1'
+  gem 'execjs'
+  gem 'jekyll-assets'
+  gem 'yui-compressor'
 end
 
 gem 'sinatra', '~> 1.4.2'
