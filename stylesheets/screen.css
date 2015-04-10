@@ -299,7 +299,7 @@ figcaption + .highlight {
   text-align: right;
   font-size: 13px;
   line-height: 1.45em;
-  background: white url('/images/noise.png?1428471099') top left !important;
+  background: white url('/images/noise.png?1428553679') top left !important;
   border-right: 1px solid #ebe4ce !important;
   -moz-box-shadow: white -1px 0 inset;
   -webkit-box-shadow: white -1px 0 inset;
@@ -389,7 +389,7 @@ html .gist .gist-file .gist-meta a {
   color: #75878b !important;
   text-decoration: none;
 }
-/* line 4, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_hover-link.scss */
+/* line 4, ../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_hover-link.scss */
 html .gist .gist-file .gist-meta a:hover, html .gist .gist-file .gist-meta a:focus {
   text-decoration: underline;
 }
@@ -418,7 +418,7 @@ html .gist .gist-file .gist-meta a[href*=raw] {
   font-size: 13px;
   padding-left: 3em;
 }
-/* line 4, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_hover-link.scss */
+/* line 4, ../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_hover-link.scss */
 html .gist .gist-file .gist-meta a[href*=raw]:hover, html .gist .gist-file .gist-meta a[href*=raw]:focus {
   text-decoration: underline;
 }
@@ -433,7 +433,7 @@ html .gist .gist-file .gist-meta a[href*=raw]:hover, html .gist .gist-file .gist
   padding: .8em;
   overflow-x: auto;
   line-height: 1.45em;
-  background: #fcfcfc url('/images/noise.png?1428471099') top left !important;
+  background: #fcfcfc url('/images/noise.png?1428553679') top left !important;
   color: #586e75 !important;
   /* Comment */
   /* Comment.Multiline */
@@ -716,7 +716,7 @@ html .gist .gist-file .gist-meta a[href*=raw]:hover, html .gist .gist-file .gist
 /* line 190, ../../sass/partials/_syntax.scss */
 .highlight, .gist-highlight {
   margin-bottom: 1.8em;
-  background: #fcfcfc url('/images/noise.png?1428471099') top left;
+  background: #fcfcfc url('/images/noise.png?1428553679') top left;
   overflow-y: hidden;
   overflow-x: auto;
 }
@@ -783,7 +783,7 @@ figure.code .highlight, .gist .highlight {
   -webkit-border-top-right-radius: 5px;
   border-top-right-radius: 5px;
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
-  background: #aaaaaa url('/images/code_bg.png?1428471099') top repeat-x;
+  background: #aaaaaa url('/images/code_bg.png?1428553679') top repeat-x;
   border: 1px solid #565656;
   border-top-color: #cbcbcb;
   border-left-color: #a5a5a5;
@@ -801,7 +801,7 @@ figure.code .highlight, .gist .highlight {
   font-size: 13px;
   padding-left: 3em;
 }
-/* line 4, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_hover-link.scss */
+/* line 4, ../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_hover-link.scss */
 .download-source:hover, figure.code figcaption a:hover, .gist figcaption a:hover, .download-source:focus, figure.code figcaption a:focus, .gist figcaption a:focus {
   text-decoration: underline;
 }
